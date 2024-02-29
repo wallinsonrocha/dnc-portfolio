@@ -1,0 +1,15 @@
+#initial{
+    display: grid;
+    gap: 1rem;
+}
+
+#initial p{
+    font-size: 36px;
+    color: #bcbcbc;
+    max-width: 900px;
+}
+
+#initial a{
+    margin-top: 2rem;
+    width: fit-content;
+}

@@ -1,0 +1,37 @@
+#projects ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    gap: 160px;
+    max-width: 1200px;
+    margin: 5rem auto;
+    margin-bottom: 0px;
+}
+
+.projects__card{
+    padding: 24px 24px 45px 24px;
+    border-radius: 50px 0px 50px 0px;
+    max-width: 448px;
+    
+    box-shadow: 0px 0px 12px #FFFFFF;
+}
+
+.projects__card img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.projects__card h3{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 36px;
+}
+
+.projects__card p{
+    margin-bottom: 36px;
+}
+
+.projects__card a{
+    padding: 1rem 2rem;
+    font-size: 20px;
+}

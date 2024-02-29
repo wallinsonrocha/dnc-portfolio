@@ -1,0 +1,32 @@
+header{
+    display: flex;
+    padding: 2rem;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header nav{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+header img{
+    width: 40px;
+}
+
+@media (min-width: 1024px) {
+    header nav:nth-child(1){
+        gap: 6rem;        
+    }
+
+    header nav:nth-child(2){
+        position: absolute;
+        right: 8%;
+    }
+  }

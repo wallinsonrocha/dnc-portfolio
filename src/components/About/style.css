@@ -1,0 +1,65 @@
+.sobre__carossel{
+    display: flex;
+    justify-content: start;
+    margin: 0 auto;    
+    overflow-x: scroll;
+    padding-bottom: 3rem;
+}
+
+.sobre__carossel::-webkit-scrollbar{
+    background: rgb(10, 10, 117);    
+    border-radius: 8px;
+}
+
+.sobre__carossel::-webkit-scrollbar-thumb{
+    background-color: rgb(9, 69, 92);    
+    border-radius: 8px;
+}
+
+.sobre__experiences{
+    display: flex;        
+    gap: 48px;
+    text-align: center;    
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.sobre__experiences div {
+    position: relative;
+  }  
+
+.sobre__experiences li:first-child div::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    transform: translateY(-85%);    
+    height: 10px;
+    background-color: #fff;
+    z-index: -1;    
+    transition: width 1s ease-in-out;
+    transition-delay: .8s;
+}
+
+.sobre__experiences li{
+    opacity: 0;
+    transform: translateY(-40px);
+    width: 348px;
+    flex-shrink: 0;
+    transition: all .2s ease;
+    transition-delay: var(--delay);
+}
+
+.reveal{
+    opacity: 1 !important;
+    transform: translateY(0px) !important;
+}
+
+.reveal_bar::before{
+    width: var(--larg) !important;
+}
+
+.sobre__title{
+    font-size: 36px;    
+}
