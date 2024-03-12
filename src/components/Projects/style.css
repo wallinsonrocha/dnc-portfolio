@@ -1,0 +1,212 @@
+#projects {
+    position: relative;
+    position: relative;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .port-link {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+    background-color: #51F6EC;
+    font-weight: bold;
+    color: #101010;
+    border-radius: 8px;
+    width: 100%;
+  }
+  #projects #projects-area {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  #projects #projects-area .port {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 1rem;
+    background-position: center;
+    background-size: cover;
+    transform: scale(2);
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+  #projects #projects-area .port .port-content {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 20px;
+  }
+  #projects #projects-area .port .port-contet .port-link {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+  #projects #projects-area .port img {
+    height: 10rem;
+    margin: 2rem 0;
+    object-fit: cover;
+  }
+  #projects #projects-area .port h2 {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s linear;
+    transition-delay: 0.3s;
+  }
+  #projects #projects-area .port p {
+    max-width: 350px;
+    margin: 1rem 0;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: all 0.3s linear;
+    transition-delay: 0.3s;
+  }
+  #projects #projects-area .port-active {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+  #projects #projects-area .port-active h2 {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  #projects #projects-area .port-active p {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  #projects #circle-area-port {
+    position: relative;
+    margin-top: 86vh;
+    z-index: 3;
+  }
+  #projects #circle-port {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    height: 500px;
+    width: 500px;
+    background: rgb(0, 148, 255);
+    background: linear-gradient(180deg, rgb(0, 148, 255) 0%, rgb(6, 47, 77) 100%);
+    border-radius: 100%;
+    transform: var(--deg);
+    transition: all 1s ease;
+  }
+  #projects #circle-port .port {
+    position: absolute;
+    display: flex;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 8rem;
+    height: 8rem;
+    background: rgb(121, 168, 31);
+    background: linear-gradient(180deg, rgb(121, 168, 31) 0%, rgb(66, 77, 6) 100%);
+    background-size: cover;
+    background-position: center;
+    transform: translate(50%, -50%) rotate(var(--degObj));
+    top: var(--top);
+    right: var(--rgt);
+    transition: all 1s ease;
+  }
+  #projects #circle-port .port::after {
+    content: "";
+    position: absolute;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: 0.5s;
+    animation: ripple 0.5s cubic-bezier(0.03, 0.54, 0.6, 0.63) infinite;
+    transition: all 1s ease;
+  }
+  #projects #circle-port .port::before {
+    content: "";
+    position: absolute;
+    border: 6px solid #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 1s cubic-bezier(0.03, 0.54, 0.6, 0.63) infinite;
+    transition: all 1s ease;
+  }
+  #projects #circle-port .port-active::after, #projects #circle-port .port-active::before {
+    content: "";
+    position: absolute;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    width: 105%;
+    height: 105%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: none;
+  }
+  
+  @media (max-width: 499px) {
+    #projects #circle-area-port {
+      position: relative;
+      margin-top: 86vh;
+    }
+    #projects #circle-port {
+      height: 300px;
+      width: 300px;
+    }
+    #projects #circle-port .port {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    #projects #circle-area-port {
+      position: relative;
+      margin-top: 76vh;
+    }
+    #projects #circle-port {
+      height: 800px;
+      width: 800px;
+    }
+    #projects #circle-port .port {
+      width: 10rem;
+      height: 10rem;
+    }
+    #projects #projects-area .port {
+      flex-direction: row;
+      align-items: start;
+      justify-content: center;
+      padding: 5rem;
+      gap: 3rem;
+    }
+  }
+  @keyframes ripple {
+    0% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5.1% {
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
